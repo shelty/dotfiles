@@ -41,5 +41,5 @@ if !exists('g:neocomplcache_keyword_patterns')
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
  " for snippets
-imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plu    g>(neocomplcache_snippets_expand)" : "\<C-n>"
+imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<C-n>"
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
