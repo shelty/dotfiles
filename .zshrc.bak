@@ -1,15 +1,6 @@
 # users generic .zshrc file for zsh(1)
 # set proxy settings
-### proxy if exists
-[ -e $HOME/.proxyrc ] && source $HOME/.proxyrc
-
-export ANDROID_SDK_ROOT=/usr/local/opt/android-sdk
-
-# oh-my-zsh
-plugins=(git ruby brew)
-ZSH=$HOME/.oh-my-zsh
-source ~/.oh-my-zsh/oh-my-zsh.sh
-
+. ~/.proxyrc
 ## Environment variable configuration
 #
 # LANG
@@ -26,7 +17,7 @@ esac
 # set prompt
 #
 autoload colors
-#colorsell""
+colors
 case ${UID} in
 0)
 PROMPT="%n$ "
@@ -215,8 +206,4 @@ export MANPATH=/opt/local/man:$MANPATH
 
 #alias vim="/usr/local/Cellar/vim/7.3/bin/vim"
 
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export CURL_CA_BUNDLE=~/tmp/cacert.pem
-eval "$(rbenv init -)"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
